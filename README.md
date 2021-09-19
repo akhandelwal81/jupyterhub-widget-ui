@@ -9,10 +9,11 @@ A template project for building custom widgets is available as a cookiecutter. T
 
 ## Install
  With pip:
-'''
+
+```
  pip install ipywidgets
-'''
+```
  with conda:
-'''
+```
  conda install -c conda-forge ipywidgets
-'''
+```
