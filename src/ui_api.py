@@ -39,3 +39,54 @@ options =['~',';',','],
 description='Seperator',
 diabled=False
 )
+
+```
+This specific code helps implementing the UI controls.
+User can upload files, select a date and perform analytics operations
+```
+header = Button(description='Sample',
+         layout=Layout(width='auto',grid_area='header'),
+         style=ButtonStyle(button_color='ligtblue'))
+box_layout = Layout(display='flex',
+                    flex_flow='column',
+                    align_items='stretch',
+                    border='solid',
+                    width='60%')
+eraser = widgets.SelectMultiple(
+         options=['tab','"'],
+         value=['tab'],
+         description='Eraser:',
+         disabled=False)
+
+
+rows = widgets.IntSlider(
+       value=0,
+       step=1,
+       description='# of lines:',
+       disabled=False,
+       continuous_update=False,
+       oritentation='horizontal',
+       readout=True,
+       readout_format='d')
+
+### button_upload = widgets.Button(
+#                   description='Upload',
+#                   disable='False',
+#                   button_style='warning',
+#                   tooltip='Click to Upload File',
+#                   icon='check')
+#button_upload.on_click(upload_clicked)
+
+accordion =widgets.Accordian(children=[
+             widgets.VBox([widgets.HBox([prompt_date,input_date]), widgets.HBox([label1,label1_upload])], layout=box_layout),
+             widgets.VBox([delimiters, eraser]),
+             rows])
+accordion.set_title(0,'File Upload')
+acordion.set_title(1,'Delimiter Supported')
+accordion.set_title(2,'Rows to Skip')
+accordion_box = widgets.VBox([
+               accordion,
+               widgets_HBox([button_upload]),
+               out
+])
+tab 
