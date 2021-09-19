@@ -30,3 +30,12 @@ out = widgets.Output(layout={'border':'2px solib black'})
 # Upload some files
 # Click Button to trigger an Upload
 # Support CSV files with different types of delimiters like '~',';',','
+
+label1=widgets.Label(value="Upload File:",layout=items_layout)
+label1_upload= widgets.FileUpload(accept="", multiple=False,layout=items_layout)
+
+delimiters = widgets.RadioButtons(
+options =['~',';',','],
+description='Seperator',
+diabled=False
+)
