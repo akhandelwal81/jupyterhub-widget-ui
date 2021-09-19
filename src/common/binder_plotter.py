@@ -3,5 +3,5 @@ This function binds the button clicks with the actual functions that will be exe
 ```
 
 def binder_plotter(b):
-  plot()
+  draw_plots()
   
