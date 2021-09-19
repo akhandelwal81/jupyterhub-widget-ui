@@ -1,2 +1,2 @@
-def binder_describe_clicked(b):
+def binder_describe(b):
   describe_datamodel()
