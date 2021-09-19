@@ -60,3 +60,12 @@ define data_process():
       
                
                       zf.close()
+                  
+                  ## Delete the zip file once the file has been unzipped and file name has been changed to required one.
+                  
+                      if os.path.exists(file_to_save):
+                        os.remove(file_to_save):
+                  
+                 ##### the unzipped file can be operated upon by Pandas and after all the data manipulations, the dataframe can be saved as parquet or avro to HDFS
+                  
+                  
