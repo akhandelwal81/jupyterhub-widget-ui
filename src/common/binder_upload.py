@@ -1,2 +1,2 @@
-def upload_clicked(b):
+def binder_upload(b):
   file_upload()
