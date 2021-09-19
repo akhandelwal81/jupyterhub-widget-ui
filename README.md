@@ -17,3 +17,14 @@ A template project for building custom widgets is available as a cookiecutter. T
 ```
  conda install -c conda-forge ipywidgets
 ```
+
+In JupyterLab, following steps would help to install and enable labextensions
+
+```
+## ensure you have nodejs install, e.g. with conda
+# conda install -c conda-forge 'nodejs>=12'
+jupyter labextension list
+jupyter labextension install --no-build @jupyter-widgets/jupyterlab-manager
+jupyter labextension install --no-build jupyter-datawidgets/extension
+jupyter labextension list
+```
